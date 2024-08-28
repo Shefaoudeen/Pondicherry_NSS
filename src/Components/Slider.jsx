@@ -1,5 +1,5 @@
 import React from "react";
-import {slideImages} from "../Data";
+import {slideImages} from "../assets/images";
 import { useState, useEffect } from "react";
 import {arrowIcon,play,pause} from "../assets/Icons";
 
@@ -73,7 +73,7 @@ const Slider = () => {
         <div
           className="absolute top-[40%] left-0 py-5 px-2 cursor-pointer bg-blue-900/75 shadow-lg"
           onClick={() =>
-            setCurrSlide((prevSlide) => --prevSlide % slideImages.length)
+            currSlide!=0 && setCurrSlide((prevSlide) => --prevSlide % slideImages.length)
           }
         >
           <img src={arrowIcon} alt="prev" className=" w-12" />

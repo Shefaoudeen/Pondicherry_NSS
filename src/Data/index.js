@@ -1,4 +1,3 @@
-import { slideImages } from "./SliderImages";
 
 const NAV_ITEMS = [
   { title: "HOME", path: "/" },
@@ -25,4 +24,4 @@ const NAV_ITEMS = [
   { title: "CONTACT", path: "/contact" },
 ];
 
-export { NAV_ITEMS,slideImages };
+export { NAV_ITEMS };
