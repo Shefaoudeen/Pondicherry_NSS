@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Layout from "./Layout/Layout";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/*Home*/}
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Layout />}>
         {/*Organisation*/}
         <Route path="/aboutUs" element={<Home />} />
         <Route path="/objectives" element={<Home />} />
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/contact" element={<Home />} />
         {/*cms*/}
         <Route path="/cms" element={<Home />} />
+      </Route>
       </Routes>
     </BrowserRouter>
   );
