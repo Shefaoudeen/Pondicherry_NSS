@@ -1,7 +1,10 @@
+import { slideImages } from "./SliderImages";
+
 const NAV_ITEMS = [
   { title: "HOME", path: "/" },
   {
     title: "ORGANIZATION",
+    path : "/aboutUs",
     subItems: [
       { title: "ABOUT US", path: "/aboutUs" },
       { title: "OBJECTIVES", path: "/objectives" },
@@ -22,4 +25,4 @@ const NAV_ITEMS = [
   { title: "CONTACT", path: "/contact" },
 ];
 
-export { NAV_ITEMS };
+export { NAV_ITEMS,slideImages };

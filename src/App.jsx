@@ -6,8 +6,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/*Home*/}
+        {/*Layout*/}
       <Route path="/" element={<Layout />}>
+        {/* Home */}
+        <Route index element={<Home />} />
         {/*Organisation*/}
         <Route path="/aboutUs" element={<Home />} />
         <Route path="/objectives" element={<Home />} />
