@@ -47,17 +47,20 @@ const WhosWho = () => {
                         </section>
 
                         <table className='table-fixed'>
-                            <tr>
-                                <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Sl. No.</th>
-                                <th className='w-3/12 border px-3 py-2 font-bold text-black/70 text-start'>Name, Designation & E-mail ID of Directorate of NSS</th>
-                                <th className='w-1/12 border px-3 py-2 font-bold text-black/70 text-start'>State</th>
-                                <th className='w-2/6 border px-3 py-2 font-bold text-black/70 text-start'>Office Address</th>
-                                <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Contact Number</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Sl. No.</th>
+                                    <th className='w-3/12 border px-3 py-2 font-bold text-black/70 text-start'>Name, Designation & E-mail ID of Directorate of NSS</th>
+                                     <th className='w-1/12 border px-3 py-2 font-bold text-black/70 text-start'>State</th>
+                                     <th className='w-2/6 border px-3 py-2 font-bold text-black/70 text-start'>Office Address</th>
+                                    <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Contact Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                             {
                                 OFFICERS_DETAILS.map((officer,index) => {
                                     return (
-                                        <tr>
+                                        <tr key={index}>
                                             <td className='border px-3 py-2 text-start align-top'>{index+1}</td>
                                             <td className='border px-3 py-2 text-start align-top'>
                                                 <h4>{officer.name}</h4>
@@ -71,10 +74,11 @@ const WhosWho = () => {
                                     )
                                 })
                             }
+                            </tbody>
                         </table>
                     </div>
 
-                    <a href='directory' className='bg-red-600 px-3 py-2 rounded-md ring-inset text-white hover:bg-white hover:ring-2 hover:text-red-600 ring-red-600 duration-300'>NSS Directory</a>
+                    <a href='/directory' className='bg-red-600 px-3 py-2 rounded-md ring-inset text-white hover:bg-white hover:ring-2 hover:text-red-600 ring-red-600 duration-300'>NSS Directory</a>
 
                 </div>
             </SidebarMenu>

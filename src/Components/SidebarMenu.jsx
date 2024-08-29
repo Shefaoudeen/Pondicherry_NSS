@@ -6,10 +6,11 @@ const SidebarMenu = ({breadCrumb,children}) => {
             <div className='flex bg-red-600 w-full py-2 px-3 text-white'>
                 {
                     breadCrumb.map((ele,i) => {
-                        return (<>
-                            <a className='hover:underline' href={ele.path}>{ele.label}</a>
+                        return (
+                        <div key={i}>
+                            <a  className='hover:underline' href={ele.path}>{ele.label}</a>
                             {i<breadCrumb.length-1 && <span className='px-1'>{">>"}</span>}
-                        </>)
+                        </div>)
                     })
                 }
             </div>
