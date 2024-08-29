@@ -1,4 +1,6 @@
 
+import { OFFICERS_DETAILS } from "./WhosWho";
+
 const NAV_ITEMS = [
   { title: "HOME", path: "/" },
   {
@@ -24,4 +26,4 @@ const NAV_ITEMS = [
   { title: "CONTACT", path: "/contact" },
 ];
 
-export { NAV_ITEMS };
+export { NAV_ITEMS,OFFICERS_DETAILS };

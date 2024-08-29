@@ -88,7 +88,7 @@ const Slider = () => {
         </div>
           {/* play pause button */}
 
-          <div className="absolute top-5 left-5 cursor-pointer">
+          <div className="absolute bottom-5 left-5 cursor-pointer opacity-65">
             <img src={isSlideActive ? pause : play} alt="pause" onClick={() => {
               isSlideActive ? clearInterval(videoInterval) : videoInterval = setInterval(() => {
                 setCurrSlide((prevSLide) => ++prevSLide % slideImages.length);

@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Layout from "./Layout/Layout";
 import AboutUs from "./pages/AboutUs";
 import Objectives from "./pages/Objectives";
+import WhosWho from "./pages/WhosWho";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
         {/*Organisation*/}
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/objectives" element={<Objectives />} />
-        <Route path="/whoswho" element={<Home />} />
+        <Route path="/whoswho" element={<WhosWho />} />
         <Route path="/directory" element={<Home />} />
         <Route path="/regActivities" element={<Home />} />
         <Route path="/specialCamp" element={<Home />} />
