@@ -5,6 +5,8 @@ import photoGalleryCover from './photoGalleryCover.jpg';
 import videoGalleryCover from './videoGalleryCover.jpg';
 import manualCover from './manualCover.jpg';
 import pyLogo from './pyLogo.jpg';
+import OrganisationPic from "./OrganisationPic.jpg"
+import ObjectivesPic from "./ObjectivesPic.jpg"
 
 export {
     NSSLogo,
@@ -13,5 +15,7 @@ export {
     photoGalleryCover,
     videoGalleryCover,
     manualCover,
-    pyLogo
+    pyLogo,
+    OrganisationPic,
+    ObjectivesPic
 }

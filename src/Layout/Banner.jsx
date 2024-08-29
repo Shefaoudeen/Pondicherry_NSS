@@ -8,10 +8,10 @@ const Banner = () => {
       <div className='flex gap-5 items-center'>
         <div>
           <h1 className='text-3xl text-blue-900 font-semibold p-1'>GOVERMENT OF PUDUCHERRY</h1>
-          <h1 className='text-2xl text-blue-900 font-semibold p-1'>புதுச்சேரி அரசு</h1>
+          <h1 className='text-2xl text-blue-900  p-1'>புதுச்சேரி அரசு</h1>
 
         </div>
-        <img src={pyLogo} alt="" className='w-40' />
+        <img src={pyLogo} alt="" className='w-32' />
       </div>
     </div>
   )
