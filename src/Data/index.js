@@ -5,7 +5,7 @@ import { UNIT_DETAILS } from "./Directory";
 const NAV_ITEMS = [
   { title: "HOME", path: "/" },
   {
-    title: "ORGANIZATION",
+    title: "ORGANISATION",
     path : "/aboutUs",
     subItems: [
       { title: "ABOUT US", path: "/aboutUs" },

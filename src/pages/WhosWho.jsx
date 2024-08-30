@@ -37,9 +37,10 @@ const WhosWho = () => {
                         <section>
                             <h1 className='font-bold py-2 px-5 border-b-2 text-black/70'>MINISTER OF STATE FOR YOUTH AFFAIRS & SPORTS</h1>
                             <div className='flex  divide-x-2'>
-                                <h3 className='py-2 px-5'>
-                                    MOS for
-                                    <h3 className='font-semibold text-slate-700'>Youth Affairs & Sports</h3></h3>
+                                <div className='py-2 px-5'>
+                                    <h3>MOS for</h3>
+                                    <h3 className='font-semibold text-slate-700'>Youth Affairs & Sports</h3>
+                                </div>
                                 <div className='px-5 py-2'>
                                     <h3>Smt. Raksha Nikhil Khadse</h3>
                                 </div>
