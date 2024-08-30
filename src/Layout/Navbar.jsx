@@ -19,7 +19,7 @@ const Navbar = () => {
                 </div>
               )
             else
-              return <a key={i} href={ele.path} className='px-4 text-center py-4 hover:bg-red cursor-pointer hover:bg-red-500 duration-500'>{ele.title}</a>
+              return <a key={i} href={ele.path} className='px-4 text-center py-4 hover:bg-red cursor-pointer hover:bg-red-500 duration-300'>{ele.title}</a>
           })
         }
       </ul>

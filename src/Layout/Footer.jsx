@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <div className='mt-20'>
         <h1 className='font-semibold text-4xl text-center text-slate-400'>SIMILAR ORGANISATIONS</h1>
-        <div className='text-xl text-center'>
+        <div className='mt-5 mb-5 text-xl text-center'>
           logos
         </div>
       </div>

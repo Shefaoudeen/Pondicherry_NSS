@@ -1,4 +1,6 @@
-import { slideImages } from "./SliderImages";
+
+import { OFFICERS_DETAILS } from "./WhosWho";
+import { UNIT_DETAILS } from "./Directory";
 
 const NAV_ITEMS = [
   { title: "HOME", path: "/" },
@@ -25,4 +27,4 @@ const NAV_ITEMS = [
   { title: "CONTACT", path: "/contact" },
 ];
 
-export { NAV_ITEMS,slideImages };
+export { NAV_ITEMS,OFFICERS_DETAILS,UNIT_DETAILS };
