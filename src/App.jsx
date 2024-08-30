@@ -1,6 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./Layout/Layout";
+import AboutUs from "./pages/AboutUs";
+import Objectives from "./pages/Objectives";
+import WhosWho from "./pages/WhosWho";
+import Directory from "./pages/Directory";
 
 export default function App() {
   return (
@@ -11,10 +15,10 @@ export default function App() {
         {/* Home */}
         <Route index element={<Home />} />
         {/*Organisation*/}
-        <Route path="/aboutUs" element={<Home />} />
-        <Route path="/objectives" element={<Home />} />
-        <Route path="/whoswho" element={<Home />} />
-        <Route path="/directory" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/objectives" element={<Objectives />} />
+        <Route path="/whoswho" element={<WhosWho />} />
+        <Route path="/directory" element={<Directory />} />
         <Route path="/regActivities" element={<Home />} />
         <Route path="/specialCamp" element={<Home />} />
         <Route path="/awards" element={<Home />} />
