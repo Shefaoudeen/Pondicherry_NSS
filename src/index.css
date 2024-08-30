@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+  background-color: rgb(239 68 68);
+}
+
+.active.sub-items {
+  background-color: white;
+  color: red;
+}
+
+
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }

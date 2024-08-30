@@ -34,7 +34,7 @@ const Directory = () => {
         return unit.regionalDirectorate === filterRegion || filterRegion === ""
     }
     function filterByState(unit){
-        return unit.state === filterState
+        return unit.state === filterState 
     }
 
     return (
@@ -48,7 +48,7 @@ const Directory = () => {
                         <div className='flex-1'>
                             <label htmlFor="filter-region" className='text-lg font-semibold'>Filter by Region</label>
                             <br />
-                            <select value={filterRegion} onChange={e => setFilterRegion(e.target.value)} name="filter-region" id="filter-region" className='custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] focus:border-0 focus:ring-2  ring-blue-700 rounded-md'>
+                            <select value={filterRegion} onChange={e => {setFilterRegion(e.target.value); setFilterState("")}} name="filter-region" id="filter-region" className='custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] focus:border-0 focus:ring-2  ring-blue-700 rounded-md'>
                                 <option defaultValue={true} value="">--Select--</option>
                                 {
                                     regionalDirectorates.map((ele) => {
@@ -75,7 +75,7 @@ const Directory = () => {
                     </section>
 
                     {/* button for showing all the units and clearing the filter fields -- displays only when filters are applied */}
-                    <button onClick={() => {setDetails(UNIT_DETAILS); setFilterRegion(""); setFilterState("")}} className={`rounded-fullp-2 text-red-600 mt-2 ${details.length < 10 ? "block" : "hidden"}`}>Show all</button>
+                    <button onClick={() => {setDetails(UNIT_DETAILS); setFilterRegion(""); setFilterState("")}} className={` px-1 text-red-600 ${details.length < 10 ? "block" : "hidden"}`}>Show all</button>
                      
                      {/* table content */}
                     <table className='w-full mt-5'>
