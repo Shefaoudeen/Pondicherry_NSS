@@ -3,22 +3,30 @@ import { footer_img, dc_logo } from "../assets/images";
 
 const Footer = () => {
   return (
-    <div className="bg-[#30D5C8]/75">
-      <div className="flex">
-        <div className="px-10 py-10 w-[70%]">
+    <div className="bg-[#30D5C8]/90 mt-10">
+      <div className="flex py-10">
+        <div className="px-20 w-[70%]">
           <h1 className="text-2xl font-bold border-b-2 border-black w-fit mb-5">
             About Pondicherry
           </h1>
-          <h1 className="text-xl text-justify">
-            Pondicherry, also known as Puducherry, is a coastal city in South
-            India, known for its French colonial heritage, serene beaches, and
-            vibrant culture. It's a popular tourist destination featuring
-            charming French-style architecture, tree-lined streets, and a
-            laid-back atmosphere. Key attractions include the Auroville
-            experimental township, the Promenade Beach, and the Sri Aurobindo
-            Ashram. Pondicherry offers a unique blend of Indian and French
-            influences, reflected in its cuisine, lifestyle, and festivals.
+          <h1 className="text-lg text-justify  py-10">
+            &nbsp;&nbsp;&nbsp;&nbsp;Pondicherry, also known as Puducherry, is a
+            coastal city in South India, known for its French colonial heritage,
+            serene beaches, and vibrant culture. It's a popular tourist
+            destination featuring charming French-style architecture, tree-lined
+            streets, and a laid-back atmosphere. Key attractions include the
+            Auroville experimental township, the Promenade Beach, and the Sri
+            Aurobindo Ashram. Pondicherry offers a unique blend of Indian and
+            French influences, reflected in its cuisine, lifestyle, and
+            festivals.
           </h1>
+          <div className="flex justify-end p-4">
+            <a href="https://tourism.py.gov.in" target="_blank">
+              <button className="bg-black px-4 py-2 text-white rounded-xl">
+                Know More
+              </button>
+            </a>
+          </div>
         </div>
         <div className="w-[30%] p-5 ">
           <h1 className="text-xl">Contact Us</h1>
@@ -27,6 +35,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div>
         <img src={footer_img} className="w-screen" />
       </div>
