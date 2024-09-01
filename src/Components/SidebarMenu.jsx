@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const SidebarMenu = ({breadCrumb,children}) => {
     return (
@@ -39,4 +39,4 @@ const SidebarMenu = ({breadCrumb,children}) => {
     )
 }
 
-export default SidebarMenu
+export default SidebarMenu;

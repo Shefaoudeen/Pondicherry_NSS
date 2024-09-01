@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from 'react'
-import { OrganisationPic } from '../assets/images'
-import SidebarMenu from '../Components/SidebarMenu'
+import React, { useEffect, useRef } from "react";
+import { OrganisationPic } from "../assets/images";
+import SidebarMenu from "../Components/SidebarMenu";
 
 const AboutUs = () => {
-  const aboutSectionRef =  useRef(null);
+  const aboutSectionRef = useRef(null);
 
   useEffect(() => {
-    if(aboutSectionRef.current)
-        aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' })
-  },[])
+    if (aboutSectionRef.current)
+      aboutSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <div className='mt-10 w-[90%] md:w-[75%] mx-auto ' ref={aboutSectionRef}>
@@ -52,7 +52,7 @@ const AboutUs = () => {
             </div>
         </SidebarMenu>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

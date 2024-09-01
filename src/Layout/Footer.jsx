@@ -1,16 +1,64 @@
-import React from 'react'
+import React from "react";
+import { footer_img, dc_logo } from "../assets/images";
 
 const Footer = () => {
   return (
-    <div>
-      <div className='mt-20'>
-        <h1 className='font-semibold text-4xl text-center text-slate-400'>SIMILAR ORGANISATIONS</h1>
-        <div className='mt-5 mb-5 text-xl text-center'>
-          logos
+    <div className="bg-[#30D5C8]/90 mt-10">
+      <div className="flex py-10">
+        <div className="px-20 w-[70%]">
+          <h1 className="text-2xl font-bold border-b-2 border-black w-fit mb-5">
+            About Pondicherry
+          </h1>
+          <h1 className="text-lg text-justify  py-10">
+            &nbsp;&nbsp;&nbsp;&nbsp;Pondicherry, also known as Puducherry, is a
+            coastal city in South India, known for its French colonial heritage,
+            serene beaches, and vibrant culture. It's a popular tourist
+            destination featuring charming French-style architecture, tree-lined
+            streets, and a laid-back atmosphere. Key attractions include the
+            Auroville experimental township, the Promenade Beach, and the Sri
+            Aurobindo Ashram. Pondicherry offers a unique blend of Indian and
+            French influences, reflected in its cuisine, lifestyle, and
+            festivals.
+          </h1>
+          <div className="flex justify-end p-4">
+            <a href="https://tourism.py.gov.in" target="_blank">
+              <button className="bg-black px-4 py-2 text-white rounded-xl">
+                Know More
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="w-[30%] p-5 ">
+          <h1 className="text-xl">Contact Us</h1>
+          <div className="w-full h-full px-5 py-5">
+            <div className="bg-white w-full h-full rounded-xl"></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src={footer_img} className="w-screen" />
+      </div>
+      <div className="bg-black  flex justify-between px-20 -mt-1 items-center">
+        <div className="text-white flex gap-2">
+          <h1>Footer-1</h1>
+          <h1>Footer-2</h1>
+          <h1>Footer-3</h1>
+          <h1>Footer-4</h1>
+          <h1>Footer-5</h1>
+        </div>
+        <div className="bg-white flex my-10 p-2 rounded-xl items-center gap-2">
+          <div>
+            <img src={dc_logo} alt="" width={75} />
+          </div>
+          <div>
+            <h1 className="text-xl font-semibold">Developed by</h1>
+            <h1 className="text-lg font-bold">Design Club - PTU</h1>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
