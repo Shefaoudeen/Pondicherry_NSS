@@ -3,7 +3,7 @@ import { footer_img, dc_logo } from "../assets/images";
 
 const Footer = () => {
   return (
-    <div className="bg-[#30D5C8]/90 mt-10">
+    <div className=" mt-10">
       <div className="flex py-10">
         <div className="px-20 w-[70%]">
           <h1 className="text-2xl font-bold border-b-2 border-black w-fit mb-5">
@@ -39,22 +39,18 @@ const Footer = () => {
       <div>
         <img src={footer_img} className="w-screen" />
       </div>
-      <div className="bg-black  flex justify-between px-20 -mt-1 items-center">
-        <div className="text-white flex gap-2">
-          <h1>Footer-1</h1>
-          <h1>Footer-2</h1>
-          <h1>Footer-3</h1>
-          <h1>Footer-4</h1>
-          <h1>Footer-5</h1>
-        </div>
-        <div className="bg-white flex my-10 p-2 rounded-xl items-center gap-2">
-          <div>
-            <img src={dc_logo} alt="" width={75} />
-          </div>
-          <div>
-            <h1 className="text-xl font-semibold">Developed by</h1>
-            <h1 className="text-lg font-bold">Design Club - PTU</h1>
-          </div>
+
+      <div className="bg-gray-800 -mt-1 flex justify-center  text-white py-2 text-center">
+        <div className="flex items-center gap-2">
+          <img src={dc_logo} width={30} />
+          <h1>
+            Developed by{" "}
+            <span className="font-bold hover:underline duration-150 delay-100 ease-linear">
+              <a href="https://ptu-designclub.netlify.app/">
+                PTU - Design Club
+              </a>
+            </span>
+          </h1>
         </div>
       </div>
     </div>
