@@ -11,7 +11,7 @@ const AboutUs = () => {
   },[])
 
   return (
-    <div className='mt-10 w-[75%] mx-auto ' ref={aboutSectionRef}>
+    <div className='mt-10 w-[90%] md:w-[75%] mx-auto ' ref={aboutSectionRef}>
         <SidebarMenu breadCrumb={[{label : "Home", path : '/'},{label : "About us", path : '/aboutus'}]}>
             <div>
                 <h1 className='text-3xl text-black/65'>Organisation</h1>

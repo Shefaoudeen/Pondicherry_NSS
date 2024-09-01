@@ -14,8 +14,8 @@ const SidebarMenu = ({breadCrumb,children}) => {
                     })
                 }
             </div>
-            <div className="mt-5 flex justify-between gap-5">
-                <aside className='flex flex-col divide-y-[1px] divide-y-white min-w-64'>
+            <div className="mt-5 md:flex justify-between gap-5">
+                <aside className='flex flex-col divide-y-[1px] divide-y-white min-w-64 mb-5 md:mb-0'>
                     <a href="" className='bg-blue-900 px-3 py-[8px] text-white hover:bg-red-500 duration-300'>Awards & Awardees</a>
                     <a href="" className='bg-blue-900 px-3 py-[8px] text-white hover:bg-red-500 duration-300'>NPYAD</a>
                     <a href="" className='bg-blue-900 px-3 py-[8px] text-white hover:bg-red-500 duration-300'>Photo Gallery</a>
@@ -34,7 +34,8 @@ const SidebarMenu = ({breadCrumb,children}) => {
                 <aside className='flex-1'>
                     {children}
                 </aside>
-            </div></div>
+            </div>
+        </div>
     )
 }
 

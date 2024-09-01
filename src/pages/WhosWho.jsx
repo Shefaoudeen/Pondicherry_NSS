@@ -12,7 +12,7 @@ const WhosWho = () => {
     }, [])
 
     return (
-        <div className='mt-10 w-[75%] mx-auto ' ref={whosWhoSectionRef}>
+        <div className='mt-10 w-[90%] lg:w-[75%] mx-auto ' ref={whosWhoSectionRef}>
             <SidebarMenu breadCrumb={[{ label: "Home", path: '/' }, { label: "Who's Who", path: '/whoswho' }]}>
                 <div>
                     <h1 className='text-3xl text-black/65'>Who's Who</h1>
@@ -47,13 +47,13 @@ const WhosWho = () => {
                             </div>
                         </section>
 
-                        <table className='table-fixed'>
+                        <table className='table-auto max-w-full'>
                             <thead>
                                 <tr>
                                     <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Sl. No.</th>
-                                    <th className='w-3/12 border px-3 py-2 font-bold text-black/70 text-start'>Name, Designation & E-mail ID of Directorate of NSS</th>
-                                     <th className='w-1/12 border px-3 py-2 font-bold text-black/70 text-start'>State</th>
-                                     <th className='w-2/6 border px-3 py-2 font-bold text-black/70 text-start'>Office Address</th>
+                                    <th className='md:w-3/12 border px-3 py-2 font-bold text-black/70 text-start'>Name, Designation & E-mail ID of Directorate of NSS</th>
+                                     <th className='md:w-1/12 border px-3 py-2 font-bold text-black/70 text-start'>State</th>
+                                     <th className='md:w-2/6 border px-3 py-2 font-bold text-black/70 text-start'>Office Address</th>
                                     <th className=' border px-3 py-2 font-bold text-black/70 text-start'>Contact Number</th>
                                 </tr>
                             </thead>

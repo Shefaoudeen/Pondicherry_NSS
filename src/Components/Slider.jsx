@@ -23,7 +23,7 @@ const Slider = () => {
   return (
     <>
       <section className="w-full relative overflow-hidden">
-        <div className="relative w-full h-[73vh] flex">
+        <div className="relative w-full h-[30vh] md:h-[40vh] lg:h-[73vh] flex">
           <div
             className={`flex transition-transform duration-1000`}
             style={{
@@ -36,7 +36,7 @@ const Slider = () => {
                 <div className="w-screen bg-blue-100 flex justify-center " key={i}>
                   <img
                     src={ele}
-                    className="object-cover object-[0%_20%] w-full"
+                    className="object-cover w-full"
                   />
                 </div>
               );
@@ -44,14 +44,14 @@ const Slider = () => {
           </div>
         </div>
         {/* bubbles for navigation of slides */}
-        <div className="flex gap-3 justify-center item-center py-4 absolute bottom-2 w-full ">
+        <div className="flex gap-2 md:gap-3 justify-center item-center md:py-4 absolute bottom-2 w-full ">
           {slideImages.map((item, index) => {
             return (
               <div
                 key={index}
                 className={`${
                   currSlide === index ? "bg-red-500 opacity-100" : "bg-blue-900 opacity-50"
-                } min-w-[15px] border-[2px] border-white rounded-full min-h-[15px] cursor-pointer`}
+                } min-w-3 md:min-w-[15px] border-[2px] border-white rounded-full min-h-3 md:min-h-[15px] cursor-pointer`}
                 onClick={() => {
                   setCurrSlide(index);
                   clearInterval(videoInterval);
@@ -71,30 +71,30 @@ const Slider = () => {
         </div>
         {/* arrows for navigating slides */}
         <div
-          className="absolute top-[40%] left-0 py-5 px-2 cursor-pointer bg-blue-900/75 shadow-lg"
+          className="hidden md:block absolute top-[30%] md:top-[40%] left-0 py-5 px-2 cursor-pointer bg-blue-900/75 shadow-lg"
           onClick={() =>
             currSlide!=0 && setCurrSlide((prevSlide) => --prevSlide % slideImages.length)
           }
         >
-          <img src={arrowIcon} alt="prev" className=" w-12" />
+          <img src={arrowIcon} alt="prev" className=" w-4 md:w-12" />
         </div>
         <div
-          className="absolute  top-[40%] right-0 py-5 px-2 cursor-pointer bg-blue-900/75 shadow-lg"
+          className="hidden  md:block absolute  top-[30%] md:top-[40%] right-0 py-5 px-2 cursor-pointer bg-blue-900/75 shadow-lg"
           onClick={() =>
             setCurrSlide((prevSlide) => ++prevSlide % slideImages.length)
           }
         >
-          <img src={arrowIcon} alt="next" className="rotate-180 w-12" />
+          <img src={arrowIcon} alt="next" className="rotate-180 w-4 md:w-12" />
         </div>
           {/* play pause button */}
 
-          <div className="absolute bottom-5 left-5 cursor-pointer opacity-65">
+          <div className="absolute left-2 md:bottom-5 bottom-2 md:left-5 cursor-pointer opacity-65">
             <img src={isSlideActive ? pause : play} alt="pause" onClick={() => {
               isSlideActive ? clearInterval(videoInterval) : videoInterval = setInterval(() => {
                 setCurrSlide((prevSLide) => ++prevSLide % slideImages.length);
               }, SLIDE_SHOW_DELAY);
               setIsSlideActive(!isSlideActive)
-            }} className="w-10" />
+            }} className="w-5 md:w-10" />
           </div>
       </section>
     </>

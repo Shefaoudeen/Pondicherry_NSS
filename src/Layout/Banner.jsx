@@ -3,7 +3,7 @@ import { NSSLogo, pyLogo } from '../assets/images'
 
 const Banner = () => {
   return (
-    <div className='text-3xl text-center min-h-44 flex items-center justify-between px-10'>
+    <div className='text-3xl text-center max-h-32 lg:min-h-44 flex items-center justify-between px-10'>
       <img src={NSSLogo} alt="Logo" />
       <div className='flex gap-5 items-center'>
         <div className='text-end'>

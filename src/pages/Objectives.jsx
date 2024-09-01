@@ -12,14 +12,14 @@ const Objectives = () => {
     },[])
   
     return (
-      <div className='mt-10 w-[75%] mx-auto ' ref={objectiveSectionRef}>
+      <div className='mt-10 w-[95%] md:w-[75%] mx-auto ' ref={objectiveSectionRef}>
         <SidebarMenu breadCrumb={[{label : "Home", path : '/'},{label : "Objectives", path : '/objectives'}]}>
             <div>
                 <h1 className='text-3xl text-black/65'>Objectives</h1>
                 <img src={ObjectivesPic} className='object-fill w-full mt-5' alt="Group pic" />
                 
-                <h3 className='font-semibold mt-5 text-blue-900 max-w-fit text-2xl pb-1 border-b-4 border-red-500'>The main objectives of National Service Scheme (NSS) are :</h3>
-                <ul className='list-decimal text-lg list-inside mt-4'>
+                <h3 className='font-semibold mt-5 text-blue-900 max-w-fit text-xl md:text-2xl pb-1 border-b-4 border-red-500'>The main objectives of National Service Scheme (NSS) are :</h3>
+                <ul className='list-decimal md:text-lg list-inside mt-4 px-2 md:px-0'>
                     <li className='mb-2'>understand the community in which they work</li>
                     <li className='mb-2'>understand themselves in relation to their community</li>
                     <li className='mb-2'>identify the needs and problems of the community and involve them in problem-solving</li>

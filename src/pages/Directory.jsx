@@ -38,13 +38,13 @@ const Directory = () => {
     }
 
     return (
-        <div className='mt-10 w-[75%] mx-auto ' ref={directorySectionRef}>
+        <div className='mt-10 w-[95%] lg:w-[75%] mx-auto ' ref={directorySectionRef}>
             <SidebarMenu breadCrumb={[{ label: "Home", path: '/' }, { label: "NSS Directories View", path: '/directory' }]}>
                 <div >
                     <h1 className='text-3xl text-black/65'>NSS Directory</h1>
 
                     {/* filter section  */}
-                    <section className='mt-5 flex gap-20 items-end py-3 px-1  rounded-md'>
+                    <section className='mt-5 md:flex space-y-4 gap-20 items-end py-3 px-1  rounded-md'>
                         <div className='flex-1'>
                             <label htmlFor="filter-region" className='text-lg font-semibold'>Filter by Region</label>
                             <br />
@@ -78,7 +78,7 @@ const Directory = () => {
                     <button onClick={() => {setDetails(UNIT_DETAILS); setFilterRegion(""); setFilterState("")}} className={` px-1 text-red-600 ${details.length < 10 ? "block" : "hidden"}`}>Show all</button>
                      
                      {/* table content */}
-                    <table className='w-full mt-5'>
+                    <table className='w-full mt-5 overflow-x-scroll'>
                         <thead>
                         <tr className='bg-blue-900 text-white'>
                             <th className=' border px-3 py-2 font-bold text-start'>Name of Regional Directorate of NSS</th>
