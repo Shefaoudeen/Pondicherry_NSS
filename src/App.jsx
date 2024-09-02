@@ -7,6 +7,9 @@ import WhosWho from "./pages/WhosWho";
 import Directory from "./pages/Directory";
 import Coordinators from "./pages/Coordinators";
 import Volunteers from "./pages/Volunteers";
+import Circular from "./pages/Circular";
+import NewsLetters from "./pages/NewsLetters";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -31,7 +34,7 @@ export default function App() {
           {/*Dashboard*/}
           <Route path="/dashboard" element={<Home />} />
           {/*circulars*/}
-          <Route path="/circulars" element={<Home />} />
+          <Route path="/circulars" element={<Circular />} />
           {/*co-ordinators*/}
           <Route path="/coordinators" element={<Coordinators />} />
           {/*voluntneers*/}
@@ -39,9 +42,9 @@ export default function App() {
           {/*gallery*/}
           <Route path="/gallery" element={<Home />} />
           {/*news*/}
-          <Route path="/news" element={<Home />} />
+          <Route path="/news" element={<NewsLetters />} />
           {/*contact*/}
-          <Route path="/contact" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           {/*cms*/}
           <Route path="/cms" element={<Home />} />
         </Route>
