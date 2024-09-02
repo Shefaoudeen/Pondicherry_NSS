@@ -5,7 +5,7 @@ import './Announcements.css'
 const Announcements = ({ title, data }) => {
 
     return (
-        <div style={{ overflowClipMargin: "content-box" }} className='relative border-blue-900 border-2 max-h-[450px] min-w-[350px] max-w-[400px] pb-3 overflow-clip'>
+        <div style={{ overflowClipMargin: "content-box" }} className='relative border-blue-900 border-2 max-h-[450px] min-w-[330px] max-w-[400px] pb-3 overflow-clip'>
             <h1 className=' w-full bg-blue-900 px-6 py-2 text-2xl z-10 text-white'>{title}</h1>
             <div className=' duration-700 overflow-clip' >
                 {/* <marquee behaviour="scroll" vspace="0" direction="up" scrollamount="2" onMouseOver={(e) => e.target.stop()} onMouseLeave={(e) => e.target.start()}>

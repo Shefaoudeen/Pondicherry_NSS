@@ -68,6 +68,7 @@ const Objectives = () => {
           </ul>
         </div>
       </SidebarMenu>
+
     </div>
   );
 };
