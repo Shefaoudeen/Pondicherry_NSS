@@ -13,6 +13,9 @@ const Navbar = () => {
     setCurrRoute(location.pathname)
     setNavOpen(false)
   }, [location.pathname])
+  useEffect(() => {
+    setSubMenuOpen("")
+  }, [navOpen])
 
   return (
     <nav className='bg-blue-900 relative'>
@@ -35,7 +38,7 @@ const Navbar = () => {
           })
         }
         {/* responsive nav for mobile */}
-        <img src={hamburger} alt="more" className='w-7 py-1 lg:hidden' onClick={() => setNavOpen(!navOpen)} />
+        <img src={hamburger} alt="more" className='w-8 py-2 lg:hidden' onClick={() => setNavOpen(!navOpen)} />
         {
           navOpen && //shows the menus only when hamburger icon is clicked
           <div className='absolute top-[100%] z-[10000] flex flex-col  right-0 bg-red-500 text-white'>
