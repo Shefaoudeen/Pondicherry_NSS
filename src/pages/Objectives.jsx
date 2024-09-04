@@ -12,7 +12,7 @@ const Objectives = () => {
   }, []);
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={objectiveSectionRef}>
+    <div className="mt-10 w-[90%] md:w-[75%] mx-auto " ref={objectiveSectionRef}>
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },

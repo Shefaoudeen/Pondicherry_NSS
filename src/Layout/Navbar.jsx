@@ -13,6 +13,9 @@ const Navbar = () => {
     setCurrRoute(location.pathname)
     setNavOpen(false)
   }, [location.pathname])
+  useEffect(() => {
+    setSubMenuOpen("")
+  }, [navOpen])
 
   return (
     <nav className='bg-blue-900 relative'>
