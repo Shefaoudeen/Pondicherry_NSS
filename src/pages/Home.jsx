@@ -20,14 +20,14 @@ const item2 = [
 const Home = () => {
   return (
     <div className="">
-      <div className="w-[75vw]  mx-auto ">
+      <div className="w-[90vw] lg:w-[75vw]  mx-auto ">
         {/* about section */}
-        <div className="mt-10 flex items-center justify-center gap-10 select-none">
+        <div className="mt-10 lg:flex items-center justify-center gap-10 select-none">
           <div className="text-blue-900 min-w-fit">
             <h1 className="text-5xl font-medium">Welcome to</h1>
-            <h3 className="text-3xl mt-3">National Service Scheme</h3>
+            <h3 className="text-3xl mt-1 md:mt-3">National Service Scheme</h3>
           </div>
-          <p className="text-justify">
+          <p className="text-justify mt-3 lg:mt-0">
             The National Service Scheme (NSS) is a Central Sector Scheme of
             Government of India, Ministry of Youth Affairs & Sports. It provides
             opportunity to the student youth of 11th & 12th Class of schools at
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
 
         {/* event section */}
-        <div className="flex mt-20 justify-between gap-5">
+        <div className="md:flex mt-10 md:mt-20 justify-between gap-5 space-y-5 md:space-y-0">
           <Announcements title={"Latest News"} data={item1} />
           <Announcements title={"Latest Events"} data={item2} />
           <img src={youthAndSport} alt="ministry of youth affairs and sports" className="flex-1 object-contain" />
@@ -51,7 +51,7 @@ const Home = () => {
       
         {/* features section */}
       <div className="flex justify-center mt-10 py-10 bg-blue-900">
-        <div className="flex w-[75%] items-center gap-8 ">
+        <div className="md:flex w-[90%] lg:w-[75%] items-center gap-8 space-y-5 md:space-y-0">
           <div className="group flex flex-col w-400 shadow-2xl">
             <div className="w-full overflow-clip duration-500">
               <img src={manualCover} className="group-hover:scale-110 object-cover duration-500" alt="NSS Manual Cover pic" />
