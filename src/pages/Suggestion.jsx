@@ -10,7 +10,6 @@ const Suggestion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your server
     console.log({
       name,
       address,
@@ -18,7 +17,7 @@ const Suggestion = () => {
       query,
     });
 
-    // Reset form
+
     setName('');
     setAddress('');
     setEmail('');
