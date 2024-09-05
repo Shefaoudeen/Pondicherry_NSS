@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Objectives from "./pages/Objectives";
 import WhosWho from "./pages/WhosWho";
 import Directory from "./pages/Directory";
+import SpecialCamp from "./pages/SpecialCamp";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
         <Route path="/whoswho" element={<WhosWho />} />
         <Route path="/directory" element={<Directory />} />
         <Route path="/regActivities" element={<Home />} />
-        <Route path="/specialCamp" element={<Home />} />
+        <Route path="/specialCamp" element={<SpecialCamp />} />
         <Route path="/awards" element={<Home />} />
         {/*tenders*/}
         <Route path="/tenders" element={<Home />} />

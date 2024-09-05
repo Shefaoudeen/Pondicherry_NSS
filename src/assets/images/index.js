@@ -7,9 +7,10 @@ import manualCover from './manualCover.jpg';
 import pyLogo from './pyLogo.jpg';
 import OrganisationPic from "./OrganisationPic.jpg"
 import ObjectivesPic from "./ObjectivesPic.jpg"
-
+import nss_footer from './nss_footer.png'
 export {
     NSSLogo,
+    nss_footer,
     slideImages,
     youthAndSport,
     photoGalleryCover,

@@ -1,5 +1,5 @@
 import React from "react";
-import { footer_img, dc_logo } from "../assets/images";
+import { nss_footer, NSSLogo } from "../assets/images";
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <img src={footer_img} className="w-screen" />
+        <img src={nss_footer} className="w-screen" />
       </div>
       <div className="bg-black  flex justify-between px-20 -mt-1 items-center">
         <div className="text-white flex gap-2">
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         <div className="bg-white flex my-10 p-2 rounded-xl items-center gap-2">
           <div>
-            <img src={dc_logo} alt="" width={75} />
+            <img src={NSSLogo} alt="" width={75} />
           </div>
           <div>
             <h1 className="text-xl font-semibold">Developed by</h1>
