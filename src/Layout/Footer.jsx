@@ -1,5 +1,5 @@
 import React from "react";
-import { nss_footer, NSSLogo } from "../assets/images";
+import { nss_footer, dc_logo } from "../assets/images";
 
 const Footer = () => {
   return (

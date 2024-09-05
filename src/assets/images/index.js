@@ -9,6 +9,7 @@ import OrganisationPic from "./OrganisationPic.jpg";
 import ObjectivesPic from "./ObjectivesPic.jpg";
 import dc_logo from "./logo.png";
 import footer_img from "./nss_footer.png";
+import nss_footer from "./nss_footer.png";
 
 export {
   NSSLogo,
@@ -22,4 +23,5 @@ export {
   ObjectivesPic,
   footer_img,
   dc_logo,
+  nss_footer,
 };
