@@ -20,9 +20,11 @@ const Circular = () => {
         ]}
       >
         <div>
-          <h1 className="text-3xl text-black/65">Circulars</h1>
+          <h1 className="text-3xl text-black/65 max-sm:text-center">
+            Circulars
+          </h1>
           <div className="py-10 px-5">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-4 max-sm:gap-10">
               {circular_details.map((ele) => {
                 return (
                   <div className="w-fit px-4 py-5 bg-yellow-200 rotate-[2deg]">

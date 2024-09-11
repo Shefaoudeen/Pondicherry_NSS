@@ -12,7 +12,10 @@ const Volunteers = () => {
   }, []);
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={volunteerSectionRef}>
+    <div
+      className="mt-10 md:w-[75%] max-md:w-[85%] mx-auto "
+      ref={volunteerSectionRef}
+    >
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
@@ -28,17 +31,15 @@ const Volunteers = () => {
           <table className="w-full border-separate border-spacing-0.5">
             <tr className="bg-blue-900 text-white">
               <th className="w-[40%] py-2 border-r-1 border-white">State</th>
-              <th className="w-[60%]">
-                No. of volunteer enrolled till 31st March, 2023
-              </th>
+              <th className="w-[60%]">No. of volunteer</th>
             </tr>
             {volunteers_details.map((ele) => {
               return (
-                <tr className="bg-slate-300">
-                  <th className="w-[40%] py-2 border-r-1 border-white">
+                <tr className="bg-slate-300 max-md:text-sm">
+                  <td className="w-[40%] py-2 border-r-1 border-white text-center">
                     {ele.school_Clg}
-                  </th>
-                  <th className="w-[60%]">{ele.number}</th>
+                  </td>
+                  <td className="w-[60%] text-center">{ele.number}</td>
                 </tr>
               );
             })}

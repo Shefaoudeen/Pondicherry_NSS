@@ -14,7 +14,10 @@ const NewsLetters = () => {
   }, []);
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={NewsLetterRef}>
+    <div
+      className="mt-10 md:w-[75%] max-md:w-[85%] mx-auto "
+      ref={NewsLetterRef}
+    >
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
@@ -27,7 +30,7 @@ const NewsLetters = () => {
           </h1>
         </div>
         <div className="py-5">
-          <table className="w-full border-separate border-spacing-0.5">
+          <table className="w-full border-separate border-spacing-0.5 max-md:text-sm">
             <tr className="bg-blue-900 text-white">
               <th className="w-[40%] py-2 border-r-1 border-white">Title</th>
               <th className="w-[60%]">Attachment</th>
@@ -39,7 +42,7 @@ const NewsLetters = () => {
                     {ele.title}
                   </td>
 
-                  <td className="w-[60%] text-center">
+                  <td className="w-[60%] text-center max-sm:p-2">
                     <Link to={ele.link}>
                       <FontAwesomeIcon icon={faFilePdf} className="mr-1" />
                       {ele.file}
