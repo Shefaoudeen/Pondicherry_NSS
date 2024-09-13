@@ -1,4 +1,3 @@
-
 import { OFFICERS_DETAILS } from "./WhosWho";
 import { UNIT_DETAILS } from "./Directory";
 
@@ -6,7 +5,7 @@ const NAV_ITEMS = [
   { title: "HOME", path: "/" },
   {
     title: "ORGANISATION",
-    path : "/aboutUs",
+    path: "/aboutUs",
     subItems: [
       { title: "ABOUT US", path: "/aboutUs" },
       { title: "OBJECTIVES", path: "/objectives" },
@@ -17,9 +16,8 @@ const NAV_ITEMS = [
       { title: "AWARDS AND AWARDEES", path: "/awards" },
     ],
   },
-  { title: "TENDERS", path: "/tenders" },
+
   { title: "SUGGESTIONS", path: "/suggestion" },
-  { title: "DASHBOARD", path: "/dashboard" },
   { title: "CIRCULAR", path: "/circulars" },
   { title: "CO-ORDINATORS", path: "/coordinators" },
   { title: "NSS VOLUNTEERS", path: "/volunteers" },
@@ -27,4 +25,4 @@ const NAV_ITEMS = [
   { title: "CONTACT", path: "/contact" },
 ];
 
-export { NAV_ITEMS,OFFICERS_DETAILS,UNIT_DETAILS };
+export { NAV_ITEMS, OFFICERS_DETAILS, UNIT_DETAILS };

@@ -1,9 +1,9 @@
 import React from "react";
-import { footer_img, dc_logo } from "../assets/images";
+import { nss_footer, dc_logo } from "../assets/images";
 
 const Footer = () => {
   return (
-    <div className=" mt-10">
+    <div className=" pt-10 bg-blue-500/80">
       <div className="flex py-10">
         <div className="px-20 w-[70%]">
           <h1 className="text-2xl font-bold border-b-2 border-black w-fit mb-5">
@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <img src={footer_img} className="w-screen" />
+        <img src={nss_footer} className="w-screen" />
       </div>
 
       <div className="bg-gray-800 -mt-1 flex justify-center  text-white py-2 text-center">

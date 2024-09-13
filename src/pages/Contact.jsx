@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="md:hidden">
         <div className=" bg-blue-900  text-sm py-10  w-[100%] flex flex-col gap-5 justify-center items-center">
           <h1 className="text-white text-2xl font-semibold">Contact Us</h1>
           <div className="text-white/60 text-center flex flex-col gap-2">
