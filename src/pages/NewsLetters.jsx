@@ -14,7 +14,7 @@ const NewsLetters = () => {
   }, []);
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={NewsLetterRef}>
+    <div className="mt-10 md:w-[90%] w-[75%] mx-auto " ref={NewsLetterRef}>
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },

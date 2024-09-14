@@ -12,7 +12,7 @@ const Volunteers = () => {
   }, []);
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={volunteerSectionRef}>
+    <div className="mt-10 md:w-[90%] w-[75%] mx-auto " ref={volunteerSectionRef}>
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },

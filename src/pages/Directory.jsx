@@ -27,7 +27,6 @@ const Directory = () => {
             setDetails([...UNIT_DETAILS.filter(filterByState)])
         else  //both filled - so filtering based on state would be enough
             setDetails([...UNIT_DETAILS.filter(filterByState)])
-
     }
 
     function filterByRegion(unit) {
@@ -38,7 +37,7 @@ const Directory = () => {
     }
 
     return (
-        <div className='mt-10 w-[95%] lg:w-[75%] mx-auto ' ref={directorySectionRef}>
+        <div className='mt-10 w-[90%] lg:w-[75%] mx-auto ' ref={directorySectionRef}>
             <SidebarMenu breadCrumb={[{ label: "Home", path: '/' }, { label: "NSS Directories View", path: '/directory' }]}>
                 <div >
                     <h1 className='text-3xl text-black/65'>NSS Directory</h1>
