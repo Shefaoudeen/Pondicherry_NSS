@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import SidebarMenu from '../Components/SidebarMenu';
 import { UNIT_DETAILS } from '../Data';
 import { pdfIcon } from '../assets/Icons';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 //remove the duplicate regions
 const regionalDirectorates = [...new Set(UNIT_DETAILS.map(item => item.regionalDirectorate))];
@@ -16,6 +18,20 @@ const Directory = () => {
         if (directorySectionRef.current)
             directorySectionRef.current.scrollIntoView({ behavior: 'smooth' })
     }, []);
+
+    useGSAP(() => {
+        gsap.from('.select-input',{
+            width : 0,
+            duration : 0.5,
+            delay : 0.5
+        })
+        gsap.from('.row-items',{
+            opacity : 0,
+            duration : 0.5,
+            stagger : 0.02,
+            delay : 0.5
+        })
+    },[])
 
     function onFilterPress() {
 
@@ -47,7 +63,7 @@ const Directory = () => {
                         <div className='flex-1'>
                             <label htmlFor="filter-region" className='text-lg font-semibold'>Filter by Region</label>
                             <br />
-                            <select value={filterRegion} onChange={e => { setFilterRegion(e.target.value); setFilterState("") }} name="filter-region" id="filter-region" className='custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] focus:border-0 focus:ring-2  ring-blue-700 rounded-md'>
+                            <select value={filterRegion} onChange={e => { setFilterRegion(e.target.value); setFilterState("") }} name="filter-region" id="filter-region" className='select-input custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] focus:border-0 focus:ring-2  ring-blue-700 rounded-md'>
                                 <option defaultValue={true} value="">--Select--</option>
                                 {
                                     regionalDirectorates.map((ele) => {
@@ -60,7 +76,7 @@ const Directory = () => {
                         <div className='flex-1'>
                             <label htmlFor="filter-state" className='text-lg font-semibold'>Filter by State</label>
                             <br />
-                            <select value={filterState} onChange={e => setFilterState(e.target.value)} name="filter-state" id="filter-state" className='custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] scroll-p-1 focus:border-0 focus:ring-2 ring-blue-700 rounded-md'>
+                            <select value={filterState} onChange={e => setFilterState(e.target.value)} name="filter-state" id="filter-state" className='select-input custom-scrollbar focus:outline-none mt-2 w-full bg-slate-200 py-1 px-4 ring-[1px] scroll-p-1 focus:border-0 focus:ring-2 ring-blue-700 rounded-md'>
                                 <option defaultValue={true} value="">--Any--</option>
                                 {
                                     //to display option(states) corresponding to the selected Region
@@ -91,11 +107,11 @@ const Directory = () => {
                                     details.map((ele, index) => {
                                         return (
                                             <tr key={index} className='border'>
-                                                <td className='border bg-cyan-100 px-3 py-4 align-top'>{ele.regionalDirectorate}</td>
-                                                <td className='border px-3 py-4 align-top'>{ele.state}</td>
-                                                <td className=' px-3 py-4 align-top flex text-blue-800 gap-1'>
-                                                    <img src={pdfIcon} alt="pdf" className='object-contain' />
-                                                    <a className='hover:underline pr-3 md:pr-0' target='_blank' href={ele.downloadLink}>Download</a>
+                                                <td className='row-items border bg-cyan-100 px-3 py-4 align-top'>{ele.regionalDirectorate}</td>
+                                                <td className='row-items border px-3 py-4 align-top'>{ele.state}</td>
+                                                <td className='row-items  px-3 py-4 align-top flex text-blue-800 gap-1'>
+                                                    <img src={pdfIcon} alt="pdf" className='row-items object-contain' />
+                                                    <a className='row-items hover:underline pr-3 md:pr-0' target='_blank' href={ele.downloadLink}>Download</a>
                                                 </td>
                                             </tr>
                                         )

@@ -3,6 +3,8 @@ import SidebarMenu from "../Components/SidebarMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { coordinators_details } from "../Data/Coordinators";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Coordinators = () => {
   const coordinatorSectionRef = useRef(null);
@@ -11,27 +13,42 @@ const Coordinators = () => {
     if (coordinatorSectionRef.current)
       coordinatorSectionRef.current.scrollIntoView({ behavior: "smooth" });
   }, []);
+  
+  useGSAP(() => {
+    gsap.from('.names',{
+      opacity : 0,
+      duration : 1,
+      stagger : 0.1,
+      delay : 0.4
+    })
+  }) 
 
   return (
-    <div className="mt-10 w-[75%] mx-auto " ref={coordinatorSectionRef}>
+    <div
+      className="mt-10 md:w-[75%] max-sm:w-[85%] mx-auto "
+      ref={coordinatorSectionRef}
+    >
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
-          { label: "Co-ordinatorts", path: "/coordinators" },
+          { label: "Co-ordinators", path: "/coordinators" },
         ]}
       >
         <div>
           <h1 className="text-3xl text-black/65">Co-ordinators</h1>
 
-          <h3 className="font-semibold mt-5 text-blue-900 max-w-fit text-2xl pb-1 border-b-4 border-red-500">
+          <h3 className="font-semibold mt-5 text-blue-900 md:max-w-fit text-2xl pb-1 border-b-4 border-red-500 max-sm:hidden">
             NSS Programme Co-ordinators in Pondicherry
+          </h3>
+          <h3 className="font-semibold mt-5 text-blue-900 md:max-w-fit text-2xl pb-1 border-b-4 border-red-500 max-sm:text-md md:hidden">
+            Co-ordinators in Pondicherry
           </h3>
         </div>
         <div className="flex justify-center items-center ">
-          <div className="py-5 grid gap-4 grid-cols-3 w-full">
+          <div className="py-5 grid gap-4 grid-cols-3 w-full max-sm:grid-cols-1 ">
             {coordinators_details.map((ele) => {
               return (
-                <div className="flex  p-3">
+                <div className="names flex p-3  max-md:justify-center max-md:items-center">
                   <div>
                     <h1 className="text-red-600 font-bold text-xl">
                       {ele.name}

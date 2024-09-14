@@ -13,8 +13,11 @@ import NewsLetters from "./pages/NewsLetters";
 import Contact from "./pages/Contact";
 import RegularActivities from "./pages/RegularActivities";
 import Awards from "./pages/Awards";
-import Tenders from "./pages/Tenders";
+
 import Suggestion from "./pages/Suggestion";
+import Regular from "./pages/Regular";
+import Special from "./pages/Special";
+import Award from "./pages/Award";
 
 export default function App() {
   return (
@@ -29,15 +32,13 @@ export default function App() {
           <Route path="/objectives" element={<Objectives />} />
           <Route path="/whoswho" element={<WhosWho />} />
           <Route path="/directory" element={<Directory />} />
-          <Route path="/regActivities" element={<RegularActivities />} />
-          <Route path="/specialCamp" element={<SpecialCamp />} />
-          <Route path="/awards" element={<Awards />} />
+          <Route path="/regActivities" element={<Regular />} />
+          <Route path="/specialCamp" element={<Special />} />
+          <Route path="/awards" element={<Award />} />
           {/*tenders*/}
-          <Route path="/tenders" element={<Tenders />} />
+
           {/*suggestions*/}
           <Route path="/suggestion" element={<Suggestion />} />
-          {/*Dashboard*/}
-          <Route path="/dashboard" element={<Home />} />
           {/*circulars*/}
           <Route path="/circulars" element={<Circular />} />
           {/*co-ordinators*/}

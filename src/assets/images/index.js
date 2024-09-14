@@ -10,8 +10,12 @@ import ObjectivesPic from "./ObjectivesPic.jpg";
 import dc_logo from "./logo.png";
 import footer_img from "./nss_footer.png";
 import nss_footer from "./nss_footer.png";
+import Governor_Img from "./governor.jpeg";
+import CM_Img from "./cm.jpg";
 
 export {
+  Governor_Img,
+  CM_Img,
   NSSLogo,
   slideImages,
   youthAndSport,
