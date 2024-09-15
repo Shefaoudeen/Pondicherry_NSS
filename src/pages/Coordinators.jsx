@@ -3,6 +3,8 @@ import SidebarMenu from "../Components/SidebarMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { coordinators_details } from "../Data/Coordinators";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Coordinators = () => {
   const coordinatorSectionRef = useRef(null);
@@ -11,6 +13,15 @@ const Coordinators = () => {
     if (coordinatorSectionRef.current)
       coordinatorSectionRef.current.scrollIntoView({ behavior: "smooth" });
   }, []);
+  
+  useGSAP(() => {
+    gsap.from('.names',{
+      opacity : 0,
+      duration : 1,
+      stagger : 0.1,
+      delay : 0.4
+    })
+  }) 
 
   return (
     <div
@@ -20,7 +31,7 @@ const Coordinators = () => {
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
-          { label: "Co-ordinatorts", path: "/coordinators" },
+          { label: "Co-ordinators", path: "/coordinators" },
         ]}
       >
         <div>
@@ -37,7 +48,7 @@ const Coordinators = () => {
           <div className="py-5 grid gap-4 grid-cols-3 w-full max-sm:grid-cols-1 ">
             {coordinators_details.map((ele) => {
               return (
-                <div className="flex  p-3  max-md:justify-center max-md:items-center">
+                <div className="names flex p-3  max-md:justify-center max-md:items-center">
                   <div>
                     <h1 className="text-red-600 font-bold text-xl">
                       {ele.name}

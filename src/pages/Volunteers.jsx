@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import SidebarMenu from "../Components/SidebarMenu";
 import { volunteers_details } from "../Data/Volunteers";
 import { total } from "../Data/Volunteers";
+import gsap from "gsap";
+import { useGSAP  } from "@gsap/react";
 
 const Volunteers = () => {
   const volunteerSectionRef = useRef(null);
@@ -11,11 +13,17 @@ const Volunteers = () => {
       volunteerSectionRef.current.scrollIntoView({ behavior: "smooth" });
   }, []);
 
+  useGSAP(() => {
+    gsap.from('.row-items',{
+        opacity : 0,
+        duration : 0.5,
+        stagger : 0.05,
+        delay : 0.5
+    })
+  },[])
+
   return (
-    <div
-      className="mt-10 md:w-[75%] max-md:w-[85%] mx-auto "
-      ref={volunteerSectionRef}
-    >
+    <div className="mt-10 md:w-[90%] w-[75%] mx-auto " ref={volunteerSectionRef}>
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
@@ -36,16 +44,16 @@ const Volunteers = () => {
             {volunteers_details.map((ele) => {
               return (
                 <tr className="bg-slate-300 max-md:text-sm">
-                  <td className="w-[40%] py-2 border-r-1 border-white text-center">
+                  <td className="row-items w-[40%] py-2 border-r-1 border-white text-center">
                     {ele.school_Clg}
                   </td>
-                  <td className="w-[60%] text-center">{ele.number}</td>
+                  <td className="row-items w-[60%] text-center">{ele.number}</td>
                 </tr>
               );
             })}
             <tr className="bg-slate-300">
-              <th className="w-[40%] py-2 border-r-1 border-white">Total</th>
-              <th className="w-[60%]">{total}</th>
+              <th className="row-items w-[40%] py-2 border-r-1 border-white">Total</th>
+              <th className="row-items w-[60%]">{total}</th>
             </tr>
           </table>
         </div>

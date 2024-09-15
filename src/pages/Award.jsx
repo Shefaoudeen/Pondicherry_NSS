@@ -1,5 +1,7 @@
 import React from "react";
 import SidebarMenu from "../Components/SidebarMenu";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Award = () => {
   const awards = [
@@ -29,6 +31,7 @@ const Award = () => {
     },
   ];
 
+
   return (
     <div className="bg-gray-100 w-screen">
       <div className="pt-10 w-[90%] md:w-[75%] mx-auto ">
@@ -44,7 +47,7 @@ const Award = () => {
               {awards.map((award, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
+                  className="container bg-white p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
                 >
                   <div className="bg-blue-500 text-white rounded-full p-3 mb-4 inline-block">
                     <svg

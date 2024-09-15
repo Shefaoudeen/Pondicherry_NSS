@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import SidebarMenu from "../Components/SidebarMenu";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Regular = () => {
   const [activeTab, setActiveTab] = useState("villages");
+  const regActivitiesSectionRef = useRef(null)
+
+  useEffect(() => {
+    if (regActivitiesSectionRef.current)
+        regActivitiesSectionRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, []);
+
+  useGSAP(() => {
+    gsap.from('.content',{
+      opacity : 0,
+      y : 100,
+      duration : 0.5
+    })
+  },[activeTab])
 
   return (
     <div className="bg-gray-100 w-screen min-h-[125vh]">
@@ -13,7 +29,7 @@ const Regular = () => {
             { label: "Regular Activites", path: "/regActivities" },
           ]}
         >
-          <div>
+          <div ref={regActivitiesSectionRef}>
             <h1 className="text-3xl text-black/65">Regular Activities</h1>
             <nav className="pt-5">
               <ul className="grid grid-cols-3 bg-white rounded-lg shadow-md">
@@ -63,7 +79,7 @@ const Regular = () => {
             </nav>
             <div className="l">
               {activeTab === "villages" && (
-                <div className="  p-6">
+                <div className="content  p-6">
                   <h2 className="text-xl font-semibold text-gray-800 mb-4">
                     Adoption of Villages
                   </h2>
@@ -109,7 +125,7 @@ const Regular = () => {
               )}
 
               {activeTab === "slums" && (
-                <div className="  p-6">
+                <div className="content  p-6">
                   <h2 className="text-xl font-semibold text-gray-800 mb-4">
                     Adoption of Slums
                   </h2>
@@ -141,7 +157,7 @@ const Regular = () => {
               )}
 
               {activeTab === "coordination" && (
-                <div className="  p-6">
+                <div className="content  p-6">
                   <h2 className="text-xl font-semibold text-gray-800 mb-4">
                     Coordination with Voluntary Organizations
                   </h2>

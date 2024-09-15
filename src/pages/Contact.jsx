@@ -9,36 +9,63 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React,{useRef,useEffect} from "react";
 
 const Contact = () => {
+
+  const circularSectionRef = useRef(null);
+
+  useEffect(() => {
+    if (circularSectionRef.current)
+      circularSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  });
+
+  useGSAP(() => {
+    gsap.from('.content',{
+      x : -100,
+      opacity : 0,
+      filter : "blur{4px)",
+      stagger : 0.1,
+      duration : 0.5,
+      delay : 0.4
+    })
+    gsap.from('.input',{
+      width : 0,
+      filter : "blur{4px)",
+      stagger : 0.1,
+      duration : 0.5,
+      delay : 0.4
+    })
+  })
   return (
-    <div className="bg-[#F7F7F7]">
+    <div className="bg-[#F7F7F7]" ref={circularSectionRef}>
       <div className="h-screen  flex justify-center items-center max-md:hidden">
         <div className="bg-white w-[60%] h-[70%] flex shadow-2xl shadow-black rounded-2xl">
           <div className="w-[40%] relative">
             <div className="absolute bg-blue-900 rounded-xl h-[80%] w-[100%] top-[10%] -left-[50px] flex flex-col gap-5 justify-center items-center">
               <h1 className="text-white text-2xl font-semibold">Contact Us</h1>
               <div className="text-white/60 text-center flex flex-col gap-2">
-                <h1>
+                <h1 className="content">
                   <FontAwesomeIcon icon={faUser} className="mr-2" />
                   Dr. Anzer R.N
                 </h1>
-                <h1>The State NSS Officer</h1>
-                <h1>
+                <h1 className="content">The State NSS Officer</h1>
+                <h1 className="content">
                   <FontAwesomeIcon icon={faMapMarker} className="mr-2" />
                   4th Floor, Vikas Bhavan
                 </h1>
-                <h1>Thiruvanthapuram</h1>
-                <h1>
+                <h1 className="content">Thiruvanthapuram</h1>
+                <h1 className="content">
                   <FontAwesomeIcon icon={faPhone} className="mr-2" />
                   071-2308687
                 </h1>
-                <h1>
+                <h1 className="content">
                   <FontAwesomeIcon icon={faMobileAlt} className="mr-2" />
                   Mobile : 9447304366
                 </h1>
-                <h1>
+                <h1 className="content">
                   <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                   keralansscell@gmail.com
                 </h1>
@@ -63,14 +90,14 @@ const Contact = () => {
                 <input
                   type="Text"
                   placeholder="Your Name"
-                  className="w-[75%] bg-gray-200 p-2 "
+                  className="input w-[75%] bg-gray-200 p-2 "
                 />
               </div>
               <div className="w-full flex justify-center">
                 <input
                   type="Text"
                   placeholder="Your Email"
-                  className="w-[75%] bg-gray-200 p-2"
+                  className="input w-[75%] bg-gray-200 p-2"
                 />
               </div>
               <div className="w-full flex justify-center">
@@ -78,7 +105,7 @@ const Contact = () => {
                   type="Text"
                   placeholder="Type your message here"
                   rows={7}
-                  className="w-[75%] bg-gray-200 p-2"
+                  className="input w-[75%] bg-gray-200 p-2"
                 />
               </div>
               <div>

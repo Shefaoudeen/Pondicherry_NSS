@@ -4,6 +4,8 @@ import { newsletter_Details } from "../Data/newsletter";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import { useGSAP  } from "@gsap/react";
 
 const NewsLetters = () => {
   const NewsLetterRef = useRef(null);
@@ -13,11 +15,17 @@ const NewsLetters = () => {
       NewsLetterRef.current.scrollIntoView({ behavior: "smooth" });
   }, []);
 
+  useGSAP(() => {
+    gsap.from('.row-items',{
+        opacity : 0,
+        duration : 0.5,
+        stagger : 0.1,
+        delay : 0.5
+    })
+  },[])
+
   return (
-    <div
-      className="mt-10 md:w-[75%] max-md:w-[85%] mx-auto "
-      ref={NewsLetterRef}
-    >
+    <div className="mt-10 md:w-[90%] w-[75%] mx-auto " ref={NewsLetterRef}>
       <SidebarMenu
         breadCrumb={[
           { label: "Home", path: "/" },
@@ -37,7 +45,7 @@ const NewsLetters = () => {
             </tr>
             {newsletter_Details.map((ele) => {
               return (
-                <tr className="bg-slate-300">
+                <tr className="bg-slate-300 row-items">
                   <td className="w-[40%] text-center py-2 border-r-1 border-white">
                     {ele.title}
                   </td>
